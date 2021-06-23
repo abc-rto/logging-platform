@@ -14,5 +14,7 @@ router.route('/signin').post(validateBody(schemas.authSchema), passportSignIn, u
 
 router.route('/secret').get(passportJWT, usersController.secret);
 
+router.route('/userdata').get(passportJWT, usersController.getUserData);
+
 module.exports = router;
 
